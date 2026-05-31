@@ -1,31 +1,41 @@
-# Exercise 02 - Browser DevTools
+# Cvičení 02 - Browser DevTools
 
-## Goal
+## Cíl
 
-Use DevTools to inspect an element and temporarily change CSS in the browser.
+Otevřít DevTools, najít HTML element a dočasně změnit CSS v prohlížeči.
 
-## Steps
+DevTools jsou nástroje prohlížeče pro kontrolu HTML, CSS, JavaScriptu a síťových požadavků.
 
-1. Run the project:
+## Kroky
+
+1. Spusť projekt:
 
 ```bash
 npm start
 ```
 
-2. Open `http://localhost:3000`.
-3. Open DevTools with `F12` or `Ctrl+Shift+I`.
-4. Go to the Elements tab.
-5. Select the hero heading.
-6. Temporarily change its color in DevTools.
-7. Take a screenshot.
+2. Otevři `http://localhost:3000`.
+3. Otevři DevTools pomocí `F12` nebo `Ctrl+Shift+I`.
+4. Přejdi na záložku `Elements`.
+5. Vyber hlavní nadpis v hero sekci.
+6. Dočasně změň jeho barvu v DevTools.
+7. Udělej screenshot.
 
-## Important
+## Důležité
 
-Changes made in DevTools are temporary. To make a real change, edit `public/css/style.css`.
+Změny v DevTools jsou jen dočasné. Pokud chceš udělat skutečnou změnu, musíš upravit soubor `public/css/style.css`.
 
-## Done When
+## Hotovo, když
 
-- You can find an HTML element in DevTools.
-- You can see which CSS rule styles it.
-- You have a screenshot of your temporary change.
+- Najdeš HTML element v DevTools.
+- Vidíš, které CSS pravidlo ho styluje.
+- Máš screenshot dočasné změny.
+
+## Co odevzdat v pull requestu
+
+Do pull requestu přidej:
+
+- screenshot z DevTools;
+- krátký popis, který element jsi kontroloval;
+- informaci, jestli jsi měnil skutečný soubor nebo jen DevTools.
 

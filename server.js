@@ -35,15 +35,15 @@ function sendNotFound(res, requestPath) {
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <title>404 - Page not found</title>
+    <title>404 - Stránka nenalezena</title>
     <link rel="stylesheet" href="/css/style.css">
   </head>
   <body class="simple-page">
     <main class="narrow-page">
-      <h1>404 - Page not found</h1>
-      <p>The server could not find <code>${escapeHtml(requestPath)}</code>.</p>
-      <p>Open DevTools, check the Network tab, and look at the status code.</p>
-      <a class="button" href="/">Back to home</a>
+      <h1>404 - Stránka nenalezena</h1>
+      <p>Server nenašel <code>${escapeHtml(requestPath)}</code>.</p>
+      <p>Otevři DevTools, zkontroluj Network a podívej se na status code.</p>
+      <a class="button" href="/">Zpět na homepage</a>
     </main>
   </body>
 </html>`;
@@ -116,7 +116,7 @@ const server = http.createServer((req, res) => {
 
   if (url.pathname === "/api/server-time") {
     loggedStatus = sendJson(res, 200, {
-      message: "This JSON was created by the local Node.js server.",
+      message: "Tento JSON vytvořil lokální Node.js server.",
       serverTime: new Date().toISOString(),
       requestMethod: req.method,
       path: url.pathname
@@ -127,9 +127,9 @@ const server = http.createServer((req, res) => {
   if (url.pathname === "/api/status-demo") {
     loggedStatus = sendJson(res, 200, {
       examples: [
-        { status: 200, meaning: "OK - the request succeeded" },
-        { status: 302, meaning: "Found - the server redirects to another URL" },
-        { status: 404, meaning: "Not Found - the server could not find the file" }
+        { status: 200, meaning: "OK - request proběhl úspěšně" },
+        { status: 302, meaning: "Found - server přesměruje prohlížeč na jinou URL" },
+        { status: 404, meaning: "Not Found - server nenašel požadovaný soubor" }
       ],
       tryTheseUrls: ["/", "/redirect-demo", "/missing-file.html"]
     });
@@ -146,7 +146,6 @@ const server = http.createServer((req, res) => {
 });
 
 server.listen(PORT, () => {
-  console.log(`Web Basics Practice Lab is running at http://localhost:${PORT}`);
-  console.log("Press Ctrl+C to stop the server.");
+  console.log(`Web Basics Practice Lab běží na http://localhost:${PORT}`);
+  console.log("Server zastavíš pomocí Ctrl+C.");
 });
-

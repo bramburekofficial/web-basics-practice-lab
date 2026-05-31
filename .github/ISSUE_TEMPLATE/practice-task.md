@@ -1,27 +1,35 @@
 ---
-name: Practice task
-about: A beginner frontend practice task
-title: "Practice: "
+name: Praktické cvičení
+about: Úkol pro začínajícího frontend trainee
+title: "Cvičení: "
 labels: practice
 assignees: ""
 ---
 
-## Goal
+## Cíl
 
-Describe what the trainee should practice.
+Popiš, co má trainee procvičit.
 
-## Steps
+## Kroky
 
-- [ ] Read the related guide.
-- [ ] Create or use a practice branch.
-- [ ] Make the requested change.
-- [ ] Run the project locally.
-- [ ] Check DevTools Console and Network.
-- [ ] Open a pull request.
+- [ ] Přečíst související návod nebo cvičení.
+- [ ] Vytvořit nebo použít vlastní practice branch.
+- [ ] Udělat požadovanou změnu.
+- [ ] Spustit projekt lokálně.
+- [ ] Zkontrolovat DevTools Console a Network.
+- [ ] Otevřít pull request.
 
-## Done When
+## Hotovo, když
 
-- The work is committed and pushed.
-- The pull request explains what changed.
-- Screenshots are attached if the UI changed.
+- Změny jsou v commitu.
+- Branch je pushnutá na GitHub.
+- Pull request vysvětluje, co se změnilo.
+- Screenshot je přiložený, pokud se měnil vzhled.
+
+## Co odevzdat v pull requestu
+
+- Krátké shrnutí změn.
+- Co bylo otestováno.
+- Screenshot, pokud je potřeba.
+- Otázky pro mentora.
 

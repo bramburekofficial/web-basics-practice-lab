@@ -1,4 +1,4 @@
-/* Use border-box so width calculations are easier to understand. */
+/* border-box zjednodušuje počítání šířek elementů. */
 * {
   box-sizing: border-box;
 }
@@ -238,7 +238,7 @@ code {
   background: #fef2f2;
 }
 
-/* This breakpoint stacks columns on smaller screens. */
+/* Tento breakpoint skládá sloupce pod sebe na menších obrazovkách. */
 @media (max-width: 760px) {
   .site-header {
     align-items: flex-start;

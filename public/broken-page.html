@@ -1,59 +1,59 @@
 <!doctype html>
-<html lang="en">
+<html lang="cs">
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Broken Page Exercise</title>
+    <title>Cvičení: rozbitá stránka</title>
     <link rel="icon" href="/images/favicon.svg" type="image/svg+xml">
     <link rel="stylesheet" href="/css/style.css">
-    <!-- Intentional 404: this file does not exist. Find it in DevTools Network. -->
+    <!-- Záměrná 404: tento soubor neexistuje. Najdi ho v DevTools Network. -->
     <script src="/js/missing-helper.js" defer></script>
   </head>
   <body class="simple-page">
     <header class="site-header">
       <a class="logo" href="/">Web Basics Lab</a>
-      <nav class="site-nav" aria-label="Main navigation">
-        <a href="/">Home</a>
-        <!-- Intentional broken link. Find the 404 after clicking it. -->
-        <a href="/about-this-lab.html">Broken about link</a>
+      <nav class="site-nav" aria-label="Hlavní navigace">
+        <a href="/">Domů</a>
+        <!-- Záměrně rozbitý odkaz. Po kliknutí najdi 404. -->
+        <a href="/about-this-lab.html">Rozbitý odkaz na About</a>
       </nav>
     </header>
 
     <main class="narrow-page">
-      <h1>Broken page exercise</h1>
+      <h1>Cvičení: rozbitá stránka</h1>
       <p>
-        This page contains several small problems. Use DevTools Console and Network
-        to find them before fixing anything.
+        Tato stránka obsahuje několik malých problémů. Použij DevTools Console
+        a Network, najdi je a teprve potom něco opravuj.
       </p>
 
-      <!-- Intentional wrong CSS class: the correct class should be info-card. -->
+      <!-- Záměrně špatná CSS třída: správně má být info-card. -->
       <section class="info-crad">
-        <h2>Problem 1: CSS class typo</h2>
-        <p>This box should look like a card, but one class name is misspelled.</p>
+        <h2>Problém 1: překlep v CSS třídě</h2>
+        <p>Tento box má vypadat jako karta, ale jedna class je napsaná špatně.</p>
       </section>
 
       <section class="exercise-panel">
-        <h2>Problem 2: image path</h2>
-        <p>The image below uses the wrong file path, so the server returns 404.</p>
+        <h2>Problém 2: cesta k obrázku</h2>
+        <p>Obrázek níže používá špatnou cestu k souboru, takže server vrací 404.</p>
         <img
           class="broken-image"
           src="/images/request-response-diagram-wrong-name.svg"
-          alt="This intentionally broken image should be fixed by trainees"
+          alt="Záměrně rozbitý obrázek, který má trainee opravit"
         >
       </section>
 
       <section class="exercise-panel">
-        <h2>Problem 3: Console error</h2>
-        <p>Open DevTools Console and look for the JavaScript error from this page.</p>
-        <button class="button" type="button" onclick="showMissingMessage()">Run broken function</button>
+        <h2>Problém 3: chyba v Console</h2>
+        <p>Otevři DevTools Console a najdi JavaScript chybu z této stránky.</p>
+        <button class="button" type="button" onclick="showMissingMessage()">Spustit rozbitou funkci</button>
       </section>
     </main>
 
     <script>
-      console.log("Broken page loaded. Now find the intentional problems.");
+      console.log("Rozbitá stránka se načetla. Teď najdi záměrné problémy.");
 
       function showMissingMessage() {
-        // Intentional error: missingMessageText is not defined.
+        // Záměrná chyba: missingMessageText není definované.
         console.log(missingMessageText);
       }
     </script>

@@ -1,7 +1,7 @@
 {
   "name": "web-basics-practice-lab",
   "version": "1.0.0",
-  "description": "A beginner-friendly practice lab for learning how websites move from code to browser to server.",
+  "description": "Český practice lab pro začínající frontend vývojáře: HTML, CSS, JavaScript, Git, GitHub a lokální Node server.",
   "main": "server.js",
   "scripts": {
     "start": "node server.js",
@@ -20,4 +20,3 @@
   "author": "",
   "license": "MIT"
 }
-

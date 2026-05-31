@@ -1,238 +1,260 @@
-# Troubleshooting для начинающих
+# Troubleshooting - řešení problémů
 
-## CSS не загружается
+Praktický seznam častých problémů pro začátečníky.
 
-Возможная причина:
+U každého problému si projdi:
 
-- неправильный путь в `<link rel="stylesheet">`;
-- файл лежит не там, где ожидает HTML;
-- сервер не запущен.
+1. možnou příčinu;
+2. jak to ověřit;
+3. jak to opravit.
 
-Как проверить:
+## CSS se nenačítá
 
-- открыть DevTools;
-- перейти во вкладку Network;
-- обновить страницу;
-- найти `style.css`;
-- проверить status code.
+Možná příčina:
 
-Как исправить:
+- špatná cesta v `<link rel="stylesheet">`;
+- CSS soubor je v jiné složce;
+- server neběží;
+- stránka je otevřená přes `file://` místo `localhost`.
 
-- убедиться, что путь такой: `/css/style.css`;
-- убедиться, что файл находится в `public/css/style.css`;
-- запустить проект через `npm start`.
+Jak ověřit:
 
-## Картинка не загружается
+- otevři DevTools;
+- přepni na `Network`;
+- obnov stránku;
+- najdi `style.css`;
+- zkontroluj status code.
 
-Возможная причина:
+Jak opravit:
 
-- неправильное имя файла;
-- неправильная папка;
-- ошибка в регистре букв;
-- файла вообще нет.
+- zkontroluj cestu `/css/style.css`;
+- zkontroluj soubor `public/css/style.css`;
+- spusť projekt přes `npm start`;
+- otevři `http://localhost:3000`.
 
-Как проверить:
+## Obrázek se nenačítá
 
-- открыть Network;
-- найти запрос к картинке;
-- проверить URL и status code;
-- сравнить путь с файлом в папке `public/images`.
+Možná příčina:
 
-Как исправить:
+- špatný název souboru;
+- špatná složka;
+- rozdíl ve velkých a malých písmenech;
+- soubor neexistuje.
 
-- исправить `src` в HTML;
-- использовать точное имя файла;
-- проверить расширение: `.svg`, `.png`, `.jpg`.
+Jak ověřit:
 
-## JavaScript не работает
+- otevři `Network`;
+- najdi request na obrázek;
+- zkontroluj URL;
+- podívej se na status code.
 
-Возможная причина:
+Jak opravit:
 
-- файл не подключен;
-- неправильный путь к JS;
-- ошибка в Console;
-- код ищет элемент, которого нет на странице.
+- oprav `src` v HTML;
+- použij přesný název souboru;
+- zkontroluj příponu, například `.svg`, `.png` nebo `.jpg`.
 
-Как проверить:
+## JavaScript nefunguje
 
-- открыть Console;
-- найти красные ошибки;
-- открыть Network и проверить `app.js`;
-- проверить, есть ли элемент с нужным `id`.
+Možná příčina:
 
-Как исправить:
+- JS soubor není připojený;
+- cesta k JS souboru je špatně;
+- v Console je chyba;
+- JavaScript hledá element, který na stránce není.
 
-- исправить путь: `/js/app.js`;
-- внимательно прочитать ошибку в Console;
-- проверить, совпадает ли `id` в HTML и JavaScript.
+Jak ověřit:
 
-## Страница показывает 404
+- otevři `Console`;
+- najdi červené chyby;
+- otevři `Network` a najdi `app.js`;
+- zkontroluj, jestli sedí `id` v HTML a JavaScriptu.
 
-Возможная причина:
+Jak opravit:
 
-- такого файла нет;
-- ссылка ведет на неправильный путь;
-- файл лежит не в папке `public`.
+- zkontroluj cestu `/js/app.js`;
+- přečti chybu v Console;
+- oprav překlep v HTML nebo JavaScriptu;
+- obnov stránku.
 
-Как проверить:
+## Stránka ukazuje 404
 
-- посмотреть URL в адресной строке;
-- открыть Network;
-- найти запрос со статусом `404`.
+Možná příčina:
 
-Как исправить:
+- soubor neexistuje;
+- odkaz vede na špatnou URL;
+- soubor není ve složce `public`.
 
-- исправить ссылку;
-- создать нужный файл;
-- перенести файл в правильную папку.
+Jak ověřit:
 
-## Сервер не запущен
+- zkontroluj URL v adresním řádku;
+- otevři `Network`;
+- najdi request se statusem `404`.
 
-Возможная причина:
+Jak opravit:
 
-- команда `npm start` не была выполнена;
-- терминал закрыли;
-- сервер остановлен;
-- другой процесс занимает порт `3000`.
+- oprav odkaz;
+- vytvoř chybějící soubor;
+- přesuň soubor do správné složky;
+- zkontroluj název souboru.
 
-Как проверить:
+## Server neběží
 
-- открыть терминал;
-- посмотреть, есть ли сообщение `running at http://localhost:3000`;
-- открыть `http://localhost:3000`.
+Možná příčina:
 
-Как исправить:
+- nespustil jsi `npm start`;
+- zavřel jsi terminál;
+- server spadl kvůli chybě;
+- port `3000` používá jiný proces.
+
+Jak ověřit:
+
+- podívej se do terminálu;
+- hledej zprávu `běží na http://localhost:3000`;
+- otevři `http://localhost:3000`.
+
+Jak opravit:
 
 ```bash
 npm start
 ```
 
-Если порт занят, попросите наставника помочь найти процесс.
+Pokud je port obsazený, požádej mentora o pomoc.
 
-## Неправильная папка в терминале
+## Terminál je ve špatné složce
 
-Возможная причина:
+Možná příčina:
 
-- терминал открыт не в папке проекта.
+- terminál není otevřený ve složce projektu.
 
-Как проверить:
+Jak ověřit:
 
 ```bash
 pwd
 ls
 ```
 
-В Windows PowerShell:
+Ve Windows PowerShell:
 
 ```powershell
 Get-Location
 Get-ChildItem
 ```
 
-Как исправить:
+Jak opravit:
 
 ```bash
 cd web-basics-practice-lab
 ```
 
-В папке должны быть `package.json`, `server.js`, `public` и `exercises`.
+Ve správné složce uvidíš:
 
-## Забыли сохранить файл
+- `package.json`;
+- `server.js`;
+- `public`;
+- `exercises`.
 
-Возможная причина:
+## Zapomněl jsi uložit soubor
 
-- изменения есть в редакторе, но не записаны на диск.
+Možná příčina:
 
-Как проверить:
+- změna je jen v editoru, ale není uložená na disku.
 
-- посмотреть, есть ли точка или индикатор unsaved в редакторе;
-- обновить страницу и сравнить результат.
+Jak ověřit:
 
-Как исправить:
+- podívej se, jestli editor ukazuje neuložený soubor;
+- obnov stránku;
+- zkontroluj `git status`.
 
-- нажать `Ctrl+S`;
-- обновить браузер.
+Jak opravit:
 
-## Отправили изменения в неправильную ветку
+- stiskni `Ctrl+S`;
+- obnov prohlížeč;
+- znovu spusť `git status`.
 
-Возможная причина:
+## Pushnul jsi špatnou branch
 
-- работа началась в `main`;
-- забыли создать отдельную ветку.
+Možná příčina:
 
-Как проверить:
+- začal jsi pracovat v `main`;
+- nevytvořil jsi practice branch;
+- pushnul jsi jinou branch, než jsi chtěl.
+
+Jak ověřit:
 
 ```bash
 git status
 git log --oneline -5
 ```
 
-Как исправить:
+Jak opravit:
 
-- не делайте новые команды наугад;
-- сообщите наставнику;
-- покажите вывод `git status` и `git log --oneline -5`.
+- nedělej další náhodné příkazy;
+- napiš mentorovi;
+- pošli výstup `git status` a `git log --oneline -5`.
 
-## Git пишет "nothing to commit"
+## Git píše "nothing to commit"
 
-Возможная причина:
+Možná příčina:
 
-- изменения уже закоммичены;
-- файл не был сохранен;
-- вы изменили файл не в этой папке;
-- Git не видит изменений.
+- změny už jsou commitnuté;
+- soubor není uložený;
+- upravil jsi jiný projekt;
+- Git nevidí žádnou změnu.
 
-Как проверить:
+Jak ověřit:
 
 ```bash
 git status
 ```
 
-Как исправить:
+Jak opravit:
 
-- сохранить файл;
-- убедиться, что вы в правильной папке;
-- изменить нужный файл;
-- снова выполнить `git status`.
+- ulož soubor;
+- zkontroluj správnou složku;
+- udělej skutečnou změnu v souboru;
+- znovu spusť `git status`.
 
-## localhost не открывается
+## localhost se neotevře
 
-Возможная причина:
+Možná příčina:
 
-- сервер не запущен;
-- неправильный порт;
-- URL введен с ошибкой.
+- server neběží;
+- používáš špatný port;
+- URL je napsaná špatně.
 
-Как проверить:
+Jak ověřit:
 
-- убедиться, что в терминале запущен `npm start`;
-- открыть ровно этот адрес:
+- zkontroluj terminál;
+- otevři přesně:
 
 ```text
 http://localhost:3000
 ```
 
-Как исправить:
+Jak opravit:
 
-- запустить сервер;
-- обновить страницу;
-- проверить терминал на ошибки.
+```bash
+npm start
+```
 
-## Проблема с кешем браузера
+Potom obnov stránku.
 
-Возможная причина:
+## Prohlížeč ukazuje starou verzi
 
-- браузер показывает старую версию CSS или JS.
+Možná příčina:
 
-Как проверить:
+- prohlížeč používá cache, tedy uloženou starší verzi souboru.
 
-- открыть DevTools;
-- нажать правой кнопкой на кнопку refresh;
-- выбрать hard reload, если доступно.
+Jak ověřit:
 
-Как исправить:
+- otevři DevTools;
+- přepni na `Network`;
+- zapni `Disable cache`;
+- obnov stránku.
 
-- нажать `Ctrl+F5`;
-- открыть DevTools и включить `Disable cache` во вкладке Network;
-- обновить страницу.
+Jak opravit:
 
+- stiskni `Ctrl+F5`;
+- nebo zapni `Disable cache` v DevTools;
+- nebo zavři a znovu otevři stránku.

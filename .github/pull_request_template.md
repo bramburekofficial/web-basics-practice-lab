@@ -1,24 +1,24 @@
-## What I changed
+## Co jsem změnil
 
 - 
 
-## What I tested
+## Co jsem otestoval
 
-- [ ] Ran the project locally
-- [ ] Checked the page in the browser
-- [ ] Checked Console for errors
-- [ ] Checked Network for 404 errors
-- [ ] Tested mobile view
+- [ ] Spustil jsem projekt lokálně přes `npm start`
+- [ ] Otevřel jsem stránku v prohlížeči
+- [ ] Zkontroloval jsem Console pro chyby
+- [ ] Zkontroloval jsem Network pro nečekané `404`
+- [ ] Otestoval jsem mobilní zobrazení
 
-## Screenshots
+## Screenshoty
 
-Add screenshots here if the page changed visually.
+Přidej screenshot, pokud se měnil vzhled stránky.
 
-## What was difficult
+## Co bylo obtížné
 
-Write one or two sentences.
+Napiš jednu nebo dvě věty.
 
-## Questions
+## Otázky pro mentora
 
-Write any questions here.
+Napiš sem otázky, pokud něco není jasné.
 

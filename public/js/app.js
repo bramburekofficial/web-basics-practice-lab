@@ -1,6 +1,6 @@
-// This file runs in the browser, not on the Node.js server.
-console.log("app.js loaded in the browser.");
-console.log("Open the Network tab to see which files the browser requested.");
+// Tento soubor běží v prohlížeči, ne na Node.js serveru.
+console.log("app.js se načetl v prohlížeči.");
+console.log("Otevři Network a podívej se, které soubory si prohlížeč vyžádal.");
 
 const messageButton = document.querySelector("#message-button");
 const buttonResult = document.querySelector("#button-result");
@@ -9,8 +9,8 @@ const statusDemo = document.querySelector("#status-demo");
 
 if (messageButton && buttonResult) {
   messageButton.addEventListener("click", () => {
-    buttonResult.textContent = "JavaScript changed this text after a button click.";
-    console.log("The button was clicked.");
+    buttonResult.textContent = "JavaScript změnil tento text po kliknutí na tlačítko.";
+    console.log("Tlačítko bylo kliknuté.");
   });
 }
 
@@ -22,11 +22,11 @@ async function loadServerTime() {
   try {
     const response = await fetch("/api/server-time");
     const data = await response.json();
-    serverTime.textContent = `Server time: ${data.serverTime}`;
-    console.log("Server time response:", data);
+    serverTime.textContent = `Čas ze serveru: ${data.serverTime}`;
+    console.log("Response z /api/server-time:", data);
   } catch (error) {
-    serverTime.textContent = "Server time failed. Are you using http://localhost:3000?";
-    console.error("Could not fetch /api/server-time:", error);
+    serverTime.textContent = "Čas ze serveru se nepodařilo načíst. Používáš http://localhost:3000?";
+    console.error("Nepodařilo se načíst /api/server-time:", error);
   }
 }
 
@@ -39,14 +39,13 @@ async function loadStatusDemo() {
     const response = await fetch("/api/status-demo");
     const data = await response.json();
     const statusList = data.examples.map((item) => item.status).join(", ");
-    statusDemo.textContent = `Status examples from server: ${statusList}`;
-    console.log("Status demo response:", data);
+    statusDemo.textContent = `Ukázky status codes ze serveru: ${statusList}`;
+    console.log("Response z /api/status-demo:", data);
   } catch (error) {
-    statusDemo.textContent = "Status demo failed. Start the local server and refresh.";
-    console.error("Could not fetch /api/status-demo:", error);
+    statusDemo.textContent = "Ukázku status codes se nepodařilo načíst. Spusť lokální server a obnov stránku.";
+    console.error("Nepodařilo se načíst /api/status-demo:", error);
   }
 }
 
 loadServerTime();
 loadStatusDemo();
-

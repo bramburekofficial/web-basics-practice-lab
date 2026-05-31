@@ -1,203 +1,234 @@
-# Практика, день 1
+# Praktický den 1
 
-## Цель первого дня
+## Cíl prvního dne
 
-Понять базовую цепочку: файл на компьютере - браузер - локальный сервер - Git - GitHub - pull request.
+Pochopit základní cestu webu:
 
-После первого дня стажер должен уметь:
+```text
+soubory v projektu -> lokální server -> prohlížeč -> DevTools -> Git -> GitHub -> pull request
+```
 
-- открыть проект в редакторе;
-- запустить локальный сервер;
-- открыть сайт через `http://localhost:3000`;
-- найти HTML, CSS и JavaScript файлы;
-- проверить ошибки в DevTools;
-- создать ветку, сделать commit, push и pull request.
+Na konci dne bys měl umět:
 
-## Что нужно понять про Git
+- otevřít projekt v editoru;
+- spustit lokální server;
+- otevřít `http://localhost:3000`;
+- najít HTML, CSS a JavaScript soubory;
+- použít DevTools;
+- vytvořit branch;
+- udělat commit;
+- pushnout změny na GitHub;
+- otevřít pull request.
 
-Git хранит историю изменений в проекте. Он помогает понять, кто что изменил, когда и зачем.
+## Co je Git
 
-Главные идеи:
+Git je nástroj pro ukládání historie změn v projektu.
 
-- `git status` показывает текущее состояние проекта;
-- ветка нужна, чтобы не работать напрямую в `main`;
-- commit сохраняет понятный шаг в истории;
-- push отправляет ветку на GitHub;
-- pull получает свежие изменения с GitHub.
+Pomáhá odpovědět na otázky:
 
-## Что нужно понять про GitHub
+- co se změnilo;
+- kdo změnu udělal;
+- kdy byla změna vytvořena;
+- proč byla změna udělána.
 
-GitHub - это место, где проект хранится онлайн. Там можно смотреть код, обсуждать задачи, открывать pull request и проверять изменения перед добавлением в `main`.
+Základní příkazy:
 
-Важно:
+```bash
+git status
+git add .
+git commit -m "Complete day 1 practice"
+git push
+```
 
-- Git и GitHub - не одно и то же;
-- Git работает на компьютере;
-- GitHub хранит репозиторий онлайн;
-- pull request нужен для проверки изменений.
+## Co je GitHub
 
-## Что такое браузер
+GitHub je online místo, kde může být uložený Git repozitář.
 
-Браузер - это программа, которая показывает сайт пользователю.
+Git běží u tebe na počítači. GitHub je webová služba, kde může tým sdílet kód, řešit issues a kontrolovat pull requesty.
 
-Он:
+`Issue` je úkol nebo problém zapsaný na GitHubu.
 
-- загружает HTML;
-- загружает CSS;
-- запускает JavaScript;
-- делает запросы к серверу;
-- показывает ошибки и запросы в DevTools.
+`Pull request` je žádost o kontrolu změn před tím, než se dostanou do `main`.
 
-Примеры браузеров: Chrome, Edge, Firefox, Safari.
+## Co je browser
 
-## Что такое сервер
+`Browser` znamená prohlížeč. Například Chrome, Edge, Firefox nebo Safari.
 
-Сервер - это программа, которая отвечает на запросы браузера.
+Prohlížeč:
 
-В этом проекте сервер находится в файле `server.js`. Он отдает файлы из папки `public` и отвечает на API-запросы:
+- načte HTML;
+- stáhne CSS;
+- spustí JavaScript;
+- zobrazí stránku;
+- posílá requesty na server;
+- ukazuje chyby v DevTools.
 
-- `/api/server-time`
-- `/api/status-demo`
+## Co je server
 
-## Что такое localhost
+Server je program, který odpovídá na požadavky prohlížeče.
 
-`localhost` означает "этот компьютер".
+V tomto projektu je server v souboru:
 
-Когда вы открываете:
+```text
+server.js
+```
+
+Server umí:
+
+- vrátit HTML stránku;
+- vrátit CSS soubor;
+- vrátit JavaScript;
+- vrátit obrázek;
+- vrátit JSON data;
+- vrátit `404`, když soubor neexistuje;
+- udělat redirect přes `302`.
+
+## Co je localhost
+
+`Localhost` je adresa tvého vlastního počítače.
+
+Když otevřeš:
 
 ```text
 http://localhost:3000
 ```
 
-браузер обращается к серверу, который запущен на вашем компьютере на порту `3000`.
+prohlížeč se ptá serveru, který běží na tvém počítači na portu `3000`.
 
-Если сервер не запущен, страница не откроется.
+Pokud server neběží, stránka se neotevře.
 
-## Что такое HTTP и HTTPS
+## Co je HTTP a HTTPS
 
-HTTP - это протокол, по которому браузер и сервер обмениваются запросами и ответами.
+HTTP je způsob, jak spolu mluví prohlížeč a server.
 
-HTTPS - это защищенная версия HTTP. В реальных сайтах почти всегда используется HTTPS.
+HTTPS je zabezpečená verze HTTP.
 
-Для локальной практики нормально использовать:
+Při lokálním vývoji je v pořádku používat:
 
 ```text
 http://localhost:3000
 ```
 
-## Что такое URL
+Na veřejném webu se běžně používá HTTPS.
 
-URL - это адрес ресурса.
+## Co je URL
 
-Пример:
+`URL` je adresa stránky nebo souboru.
+
+Příklad:
 
 ```text
 http://localhost:3000/about.html
 ```
 
-В этом адресе:
+Části URL:
 
-- `http` - протокол;
-- `localhost` - хост;
-- `3000` - порт;
-- `/about.html` - путь к файлу.
+- `http` - protokol;
+- `localhost` - host, tedy počítač nebo doména;
+- `3000` - port;
+- `/about.html` - cesta k souboru.
 
-## Что такое request и response
+## Co je request a response
 
-Request - это запрос от браузера к серверу.
+`Request` je požadavek z prohlížeče na server.
 
-Response - это ответ сервера браузеру.
+`Response` je odpověď serveru prohlížeči.
 
-Пример:
+Příklad:
 
 ```text
 GET /css/style.css
 ```
 
-Браузер просит CSS-файл. Сервер отвечает файлом и статусом, например `200`.
+Prohlížeč žádá CSS soubor. Server odpoví souborem a status codem.
 
-## Что такое status code
+## Co je status code
 
-Status code показывает результат запроса.
+`Status code` je číslo, které říká, jak dopadl request.
 
-Самые важные для первого дня:
+Důležité příklady:
 
-- `200 OK` - все хорошо, файл найден;
-- `302 Found` - сервер перенаправил браузер на другой адрес;
-- `404 Not Found` - файл или страница не найдены;
-- `500 Internal Server Error` - ошибка на сервере.
+- `200 OK` - vše proběhlo dobře;
+- `302 Found` - server posílá prohlížeč na jinou URL;
+- `404 Not Found` - soubor nebo stránka neexistuje;
+- `500 Internal Server Error` - chyba na serveru.
 
-## Как пользоваться DevTools
+## Jak používat DevTools
 
-DevTools - это инструменты разработчика в браузере.
+DevTools jsou nástroje prohlížeče pro vývojáře.
 
-Открыть:
+Otevření:
 
 - `F12`
-- или `Ctrl+Shift+I`
-- или правый клик по странице, затем `Inspect`
+- `Ctrl+Shift+I`
+- pravý klik na stránku a `Inspect`
 
-DevTools помогает понять, что реально происходит в браузере.
+DevTools ti pomůžou zjistit, co se skutečně děje v prohlížeči.
 
-## Что смотреть во вкладке Elements
+## Co sledovat v záložce Elements
 
-Во вкладке Elements можно увидеть HTML, который сейчас отображается в браузере.
+`Elements` ukazuje HTML, které prohlížeč právě zobrazuje.
 
-Что сделать:
+Vyzkoušej:
 
-- выбрать заголовок на странице;
-- посмотреть его CSS-правила;
-- временно изменить цвет или размер;
-- понять, что изменения в DevTools не сохраняются в файл.
+- vyber nadpis na stránce;
+- najdi CSS pravidla;
+- dočasně změň barvu;
+- obnov stránku a všimni si, že dočasná změna zmizela.
 
-## Что смотреть во вкладке Console
+Změny v DevTools nejsou automaticky uložené do souboru.
 
-Console показывает сообщения и ошибки JavaScript.
+## Co sledovat v záložce Console
 
-Что сделать:
+`Console` ukazuje zprávy a chyby z JavaScriptu.
 
-- открыть главную страницу;
-- нажать кнопку;
-- увидеть `console.log`;
-- открыть `broken-page.html`;
-- найти intentional JavaScript error.
+Vyzkoušej:
 
-Если в Console есть красная ошибка, ее нужно прочитать внимательно. Часто там сразу написано имя файла и номер строки.
+- otevři homepage;
+- klikni na tlačítko;
+- sleduj `console.log`;
+- otevři `broken-page.html`;
+- najdi záměrnou JavaScript chybu.
 
-## Что смотреть во вкладке Network
+Červenou chybu čti pomalu. Často v ní je název souboru a číslo řádku.
 
-Network показывает все запросы браузера.
+## Co sledovat v záložce Network
 
-Что сделать:
+`Network` ukazuje requesty, které prohlížeč poslal.
 
-- открыть Network;
-- обновить страницу;
-- найти запросы к HTML, CSS, JS и картинке;
-- посмотреть status code;
-- открыть `/redirect-demo`;
-- открыть несуществующий файл и увидеть `404`.
+Vyzkoušej:
 
-## Практическое задание
+- otevři DevTools;
+- přepni na `Network`;
+- obnov stránku;
+- najdi HTML, CSS, JS a obrázek;
+- zkontroluj status code;
+- otevři `/redirect-demo`;
+- otevři neexistující soubor a najdi `404`.
 
-1. Склонировать репозиторий.
-2. Создать ветку `practice/day-1-your-name`.
-3. Запустить проект через `npm start`.
-4. Открыть `http://localhost:3000`.
-5. Проверить главную страницу в DevTools.
-6. Открыть `broken-page.html`.
-7. Найти проблемы через Console и Network.
-8. Исправить одну маленькую проблему.
-9. Сделать commit и push.
-10. Открыть pull request.
+## Praktické zadání
 
-## Что нужно сдать в конце дня
+1. Naklonuj repozitář.
+2. Spusť `npm install`.
+3. Spusť `npm start`.
+4. Otevři `http://localhost:3000`.
+5. Vytvoř branch `practice/day-1-tvoje-jmeno`.
+6. Projdi homepage v DevTools.
+7. Otevři `broken-page.html`.
+8. Najdi chyby v Console a Network.
+9. Oprav jednu malou chybu podle zadání.
+10. Udělej commit.
+11. Pushni branch.
+12. Otevři pull request.
 
-В конце дня нужно сдать pull request.
+## Co odevzdat na konci dne
 
-В pull request должно быть:
+Odevzdává se pull request.
 
-- короткое описание, что изменено;
-- что проверено локально;
-- скриншот, если менялся внешний вид;
-- вопрос, если что-то осталось непонятным.
+Pull request má obsahovat:
 
+- krátké shrnutí změn;
+- co bylo otestováno lokálně;
+- screenshot, pokud se měnil vzhled;
+- otázku, pokud něco není jasné;
+- odkaz na issue, pokud pracuješ podle issue.

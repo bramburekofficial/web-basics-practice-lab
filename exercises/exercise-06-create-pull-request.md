@@ -1,46 +1,60 @@
-# Exercise 06 - Create Pull Request
+# Cvičení 06 - Pull request
 
-## Goal
+## Cíl
 
-Commit your work, push your branch, and create a pull request on GitHub.
+Udělat commit, pushnout branch a otevřít pull request na GitHubu.
 
-## Steps
+`Pull request` je žádost o kontrolu změn před sloučením do `main`.
 
-1. Check your branch:
+## Kroky
+
+1. Zkontroluj branch:
 
 ```bash
 git status
 ```
 
-2. Add your changes:
+2. Přidej změny:
 
 ```bash
 git add .
 ```
 
-3. Commit your changes:
+3. Udělej commit:
 
 ```bash
 git commit -m "Complete day 1 practice"
 ```
 
-4. Push your branch:
+4. Pushni branch:
 
 ```bash
-git push origin practice/day-1-your-name
+git push origin practice/day-1-tvoje-jmeno
 ```
 
-5. Open GitHub.
-6. Create a pull request into `main`.
-7. Use this PR title:
+5. Otevři GitHub.
+6. Vytvoř pull request do `main`.
+7. Použij název:
 
 ```text
 Practice Day 1: Git, Browser, Server Basics
 ```
 
-## Done When
+8. Vyplň šablonu pull requestu.
 
-- Your branch is on GitHub.
-- You opened a pull request.
-- The pull request explains what you changed and tested.
+## Hotovo, když
+
+- Tvoje branch je na GitHubu.
+- Pull request je otevřený.
+- Pull request popisuje, co se změnilo.
+- Pull request popisuje, co bylo otestováno.
+
+## Co odevzdat v pull requestu
+
+Do pull requestu napiš:
+
+- co jsi změnil;
+- jak jsi projekt spustil;
+- co jsi zkontroloval v prohlížeči;
+- jestli máš otázku pro mentora.
 

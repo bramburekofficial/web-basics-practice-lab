@@ -1,21 +1,21 @@
 <svg width="760" height="520" viewBox="0 0 760 520" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
-  <title id="title">Browser request and server response diagram</title>
-  <desc id="desc">A browser sends an HTTP request to a server and receives an HTML response.</desc>
+  <title id="title">Diagram requestu a response</title>
+  <desc id="desc">Prohlížeč posílá HTTP request na server a dostává HTML response.</desc>
   <rect width="760" height="520" rx="24" fill="#F8FAFC"/>
   <rect x="64" y="96" width="250" height="210" rx="16" fill="#FFFFFF" stroke="#CBD5E1" stroke-width="3"/>
   <rect x="64" y="96" width="250" height="48" rx="16" fill="#E0F2FE"/>
   <circle cx="92" cy="120" r="7" fill="#EF4444"/>
   <circle cx="116" cy="120" r="7" fill="#F59E0B"/>
   <circle cx="140" cy="120" r="7" fill="#22C55E"/>
-  <text x="92" y="186" fill="#0F172A" font-family="Arial, Helvetica, sans-serif" font-size="32" font-weight="700">Browser</text>
-  <text x="92" y="228" fill="#475569" font-family="Arial, Helvetica, sans-serif" font-size="22">Displays HTML</text>
-  <text x="92" y="260" fill="#475569" font-family="Arial, Helvetica, sans-serif" font-size="22">Runs CSS and JS</text>
+  <text x="92" y="186" fill="#0F172A" font-family="Arial, Helvetica, sans-serif" font-size="30" font-weight="700">Prohlížeč</text>
+  <text x="92" y="228" fill="#475569" font-family="Arial, Helvetica, sans-serif" font-size="22">Zobrazuje HTML</text>
+  <text x="92" y="260" fill="#475569" font-family="Arial, Helvetica, sans-serif" font-size="22">Spouští CSS a JS</text>
   <rect x="452" y="96" width="244" height="210" rx="16" fill="#FFFFFF" stroke="#CBD5E1" stroke-width="3"/>
   <rect x="496" y="136" width="156" height="26" rx="8" fill="#CCFBF1"/>
   <rect x="496" y="184" width="156" height="26" rx="8" fill="#CCFBF1"/>
   <rect x="496" y="232" width="156" height="26" rx="8" fill="#CCFBF1"/>
   <text x="496" y="340" fill="#0F172A" font-family="Arial, Helvetica, sans-serif" font-size="32" font-weight="700">Server</text>
-  <text x="496" y="382" fill="#475569" font-family="Arial, Helvetica, sans-serif" font-size="22">Sends files</text>
+  <text x="496" y="382" fill="#475569" font-family="Arial, Helvetica, sans-serif" font-size="22">Vrací soubory</text>
   <path d="M330 170H432" stroke="#0F766E" stroke-width="8" stroke-linecap="round"/>
   <path d="M418 152L440 170L418 188" stroke="#0F766E" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
   <text x="336" y="142" fill="#0F766E" font-family="Arial, Helvetica, sans-serif" font-size="22" font-weight="700">Request</text>
@@ -23,6 +23,6 @@
   <path d="M342 236L320 254L342 272" stroke="#1769AA" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
   <text x="334" y="308" fill="#1769AA" font-family="Arial, Helvetica, sans-serif" font-size="22" font-weight="700">Response</text>
   <rect x="110" y="386" width="540" height="62" rx="12" fill="#FFFFFF" stroke="#CBD5E1" stroke-width="2"/>
-  <text x="138" y="425" fill="#334155" font-family="Arial, Helvetica, sans-serif" font-size="22">Example: GET /index.html -> 200 OK</text>
+  <text x="138" y="425" fill="#334155" font-family="Arial, Helvetica, sans-serif" font-size="22">Příklad: GET /index.html -> 200 OK</text>
 </svg>
 

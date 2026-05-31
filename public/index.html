@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="cs">
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -10,108 +10,108 @@
   <body>
     <header class="site-header">
       <a class="logo" href="/">Web Basics Lab</a>
-      <nav class="site-nav" aria-label="Main navigation">
-        <a href="#how-web-works">How the web works</a>
-        <a href="#browser-server">Browser vs server</a>
+      <nav class="site-nav" aria-label="Hlavní navigace">
+        <a href="#how-web-works">Jak funguje web</a>
+        <a href="#browser-server">Prohlížeč vs server</a>
         <a href="#status-codes">Status codes</a>
-        <a href="/about.html">About</a>
+        <a href="/about.html">O projektu</a>
       </nav>
     </header>
 
     <main>
       <section class="hero">
         <div class="hero-content">
-          <h1>Learn how a website gets from code to browser.</h1>
+          <h1>Nauč se, jak se web dostane z kódu do prohlížeče.</h1>
           <p>
-            Practice HTML, CSS, JavaScript, Git, GitHub, local servers, URLs,
-            HTTP status codes, DevTools, and basic troubleshooting in one small project.
+            Procvič si HTML, CSS, JavaScript, Git, GitHub, lokální server,
+            URL, HTTP status codes, DevTools a základní troubleshooting.
           </p>
           <div class="hero-actions">
-            <a class="button" href="#how-web-works">Start learning</a>
-            <a class="button button-secondary" href="/broken-page.html">Open broken page</a>
+            <a class="button" href="#how-web-works">Začít učení</a>
+            <a class="button button-secondary" href="/broken-page.html">Otevřít rozbitou stránku</a>
           </div>
         </div>
         <img
           class="hero-image"
           src="/images/request-response-diagram.svg"
-          alt="Diagram showing a browser request and server response"
+          alt="Diagram ukazující request z prohlížeče a response ze serveru"
         >
       </section>
 
       <section class="section" id="how-web-works">
         <div class="section-heading">
-          <h2>How the web works</h2>
-          <p>A website is a group of files. The browser asks for those files, reads them, and draws the page.</p>
+          <h2>Jak funguje web</h2>
+          <p>Web je skupina souborů. Prohlížeč si je vyžádá, přečte je a zobrazí stránku.</p>
         </div>
 
         <div class="card-grid">
           <article class="info-card">
             <h3>HTML</h3>
-            <p>HTML gives the page structure: headings, paragraphs, links, buttons, sections, and images.</p>
+            <p>HTML dává stránce strukturu: nadpisy, odstavce, odkazy, tlačítka, sekce a obrázky.</p>
           </article>
           <article class="info-card">
             <h3>CSS</h3>
-            <p>CSS controls the visual style: layout, colors, spacing, borders, hover states, and mobile behavior.</p>
+            <p>CSS řeší vzhled: layout, barvy, mezery, okraje, hover stavy a mobilní zobrazení.</p>
           </article>
           <article class="info-card">
             <h3>JavaScript</h3>
-            <p>JavaScript adds behavior: button clicks, browser console messages, API requests, and page updates.</p>
+            <p>JavaScript přidává chování: kliknutí na tlačítko, zprávy v Console, API requesty a změny stránky.</p>
           </article>
         </div>
       </section>
 
       <section class="section two-column" id="browser-server">
         <div>
-          <h2>Browser vs Server</h2>
+          <h2>Prohlížeč vs server</h2>
           <p>
-            The browser runs on your computer. It displays HTML, applies CSS,
-            runs JavaScript, and lets you inspect what happened with DevTools.
+            Prohlížeč běží na tvém počítači. Zobrazuje HTML, aplikuje CSS,
+            spouští JavaScript a přes DevTools ti ukáže, co se stalo.
           </p>
           <p>
-            The server listens for requests and sends responses. In this project,
-            <code>server.js</code> sends HTML, CSS, JavaScript, images, redirects,
-            404 pages, and JSON API responses.
+            Server poslouchá requesty a posílá response. V tomto projektu
+            <code>server.js</code> vrací HTML, CSS, JavaScript, obrázky,
+            redirecty, 404 stránku a JSON API odpovědi.
           </p>
         </div>
 
         <div class="request-box">
-          <h3>Try the local API</h3>
-          <p id="server-time">Server time will appear here after JavaScript runs.</p>
-          <p id="status-demo">Status demo data will appear here too.</p>
-          <button class="button" id="message-button" type="button">Click JavaScript button</button>
-          <p class="small-note" id="button-result">The button has not been clicked yet.</p>
+          <h3>Vyzkoušej lokální API</h3>
+          <p id="server-time">Čas ze serveru se zobrazí po spuštění JavaScriptu.</p>
+          <p id="status-demo">Ukázka status codes se zobrazí také.</p>
+          <button class="button" id="message-button" type="button">Klikni na JavaScript tlačítko</button>
+          <p class="small-note" id="button-result">Tlačítko zatím nebylo kliknuté.</p>
         </div>
       </section>
 
       <section class="section" id="status-codes">
         <div class="section-heading">
-          <h2>HTTP Status Codes</h2>
-          <p>Status codes help you understand what happened after a request.</p>
+          <h2>HTTP status codes</h2>
+          <p>Status code ti pomůže pochopit, co se stalo po requestu.</p>
         </div>
 
         <div class="status-list">
           <article class="status-card">
             <span class="status-number">200</span>
             <h3>OK</h3>
-            <p>The file or data was found and returned successfully.</p>
+            <p>Soubor nebo data byla nalezena a úspěšně vrácena.</p>
           </article>
           <article class="status-card">
             <span class="status-number">302</span>
             <h3>Redirect</h3>
-            <p>The server sends the browser to another URL. Try <a href="/redirect-demo">/redirect-demo</a>.</p>
+            <p>Server posílá prohlížeč na jinou URL. Zkus <a href="/redirect-demo">/redirect-demo</a>.</p>
           </article>
           <article class="status-card">
             <span class="status-number">404</span>
             <h3>Not Found</h3>
-            <p>The browser asked for something that does not exist. Try <a href="/missing-file.html">a missing file</a>.</p>
+            <p>Prohlížeč požádal o něco, co neexistuje. Zkus <a href="/missing-file.html">chybějící soubor</a>.</p>
           </article>
         </div>
       </section>
     </main>
 
     <footer class="site-footer">
-      <p>Practice project for junior frontend trainees.</p>
-      <a href="/about.html">Read about this lab</a>
+      <p>Practice lab pro začínající frontend vývojáře.</p>
+      <a href="/about.html">Přečíst o projektu</a>
     </footer>
 
     <script src="/js/app.js"></script>

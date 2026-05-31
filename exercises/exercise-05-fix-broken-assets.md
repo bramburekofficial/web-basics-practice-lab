@@ -1,32 +1,45 @@
-# Exercise 05 - Fix Broken Assets
+# Cvičení 05 - Oprava rozbitých assetů
 
-## Goal
+## Cíl
 
-Use DevTools to find and fix broken image, CSS, link, and JavaScript issues.
+Použít DevTools Console a Network k nalezení rozbitého obrázku, špatné CSS třídy, rozbitého odkazu a JavaScript chyby.
 
-## Steps
+`Asset` je soubor používaný stránkou, například obrázek, CSS nebo JavaScript.
 
-1. Run the server:
+## Kroky
+
+1. Spusť server:
 
 ```bash
 npm start
 ```
 
-2. Open `http://localhost:3000/broken-page.html`.
-3. Open DevTools Console.
-4. Open DevTools Network.
-5. Find:
-   - one missing JavaScript file request;
-   - one broken image path;
-   - one broken link;
-   - one JavaScript console error;
-   - one wrong CSS class.
-6. Fix at least one problem.
-7. Refresh and confirm the problem is fixed.
+2. Otevři `http://localhost:3000/broken-page.html`.
+3. Otevři DevTools.
+4. Zkontroluj záložku `Console`.
+5. Zkontroluj záložku `Network`.
+6. Najdi:
+   - jeden chybějící JavaScript soubor;
+   - jeden rozbitý obrázek;
+   - jeden rozbitý odkaz;
+   - jednu JavaScript chybu;
+   - jednu špatnou CSS třídu.
+7. Oprav alespoň jeden problém.
+8. Obnov stránku a ověř, že opravený problém zmizel.
 
-## Done When
+## Hotovo, když
 
-- You can show which request returned `404`.
-- You can explain which file you changed.
-- Console and Network helped you find the issue.
+- Umíš ukázat request, který vrátil `404`.
+- Umíš vysvětlit, který soubor jsi změnil.
+- Použil jsi Console nebo Network k nalezení problému.
+- Oprava je v commitu.
+
+## Co odevzdat v pull requestu
+
+Do pull requestu napiš:
+
+- jaký problém jsi našel;
+- jak jsi ho našel v DevTools;
+- jaký soubor jsi změnil;
+- screenshot před opravou nebo po opravě, pokud dává smysl.
 

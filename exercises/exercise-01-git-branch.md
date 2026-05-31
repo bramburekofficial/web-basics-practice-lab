@@ -1,36 +1,46 @@
-# Exercise 01 - Git Branch
+# Cvičení 01 - Git branch
 
-## Goal
+## Cíl
 
-Create your own branch and make one small text change.
+Vytvořit vlastní `branch` a udělat malou textovou změnu.
 
-## Steps
+`Branch` je samostatná větev práce. Díky ní nemusíš měnit `main` přímo.
 
-1. Open the project in your terminal.
-2. Check the current branch:
+## Kroky
 
-```bash
-git status
-```
-
-3. Create a new branch:
-
-```bash
-git checkout -b practice/day-1-your-name
-```
-
-4. Open `public/index.html`.
-5. Change one sentence in the hero section.
-6. Save the file.
-7. Check Git status:
+1. Otevři projekt v terminálu.
+2. Zkontroluj aktuální stav:
 
 ```bash
 git status
 ```
 
-## Done When
+3. Vytvoř novou branch:
 
-- You are not working directly in `main`.
-- `git status` shows your changed file.
-- You can explain what a branch is.
+```bash
+git checkout -b practice/day-1-tvoje-jmeno
+```
+
+4. Otevři `public/index.html`.
+5. Změň jednu krátkou větu na homepage.
+6. Soubor ulož.
+7. Znovu spusť:
+
+```bash
+git status
+```
+
+## Hotovo, když
+
+- Nepracuješ přímo v `main`.
+- `git status` ukazuje změněný soubor.
+- Umíš vlastními slovy říct, co je branch.
+
+## Co odevzdat v pull requestu
+
+Do pull requestu napiš:
+
+- jakou větu jsi změnil;
+- jakou branch jsi použil;
+- že projekt po změně stále funguje lokálně.
 

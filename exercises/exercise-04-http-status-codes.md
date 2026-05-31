@@ -1,32 +1,44 @@
-# Exercise 04 - HTTP Status Codes
+# Cvičení 04 - HTTP status codes
 
-## Goal
+## Cíl
 
-Find `200`, `302`, and `404` responses in DevTools Network.
+Najít v DevTools Network odpovědi se status codes `200`, `302` a `404`.
 
-## Steps
+`Status code` je číslo, které říká, jak dopadl request.
 
-1. Run the server:
+## Kroky
+
+1. Spusť server:
 
 ```bash
 npm start
 ```
 
-2. Open `http://localhost:3000`.
-3. Open DevTools Network.
-4. Refresh the page and find status `200`.
-5. Open `http://localhost:3000/redirect-demo` and find status `302`.
-6. Open `http://localhost:3000/missing-file.html` and find status `404`.
+2. Otevři `http://localhost:3000`.
+3. Otevři DevTools a záložku `Network`.
+4. Obnov stránku a najdi status `200`.
+5. Otevři `http://localhost:3000/redirect-demo` a najdi status `302`.
+6. Otevři `http://localhost:3000/missing-file.html` a najdi status `404`.
 
-## Questions
+## Otázky
 
-- Which request returned `200`?
-- Which request returned `302`?
-- Which request returned `404`?
-- What did the browser do after the redirect?
+- Který request vrátil `200`?
+- Který request vrátil `302`?
+- Který request vrátil `404`?
+- Co udělal prohlížeč po redirectu?
 
-## Done When
+## Hotovo, když
 
-- You can find status codes in Network.
-- You can explain what each status means.
+- Najdeš všechny tři status codes v Network.
+- Umíš říct, co znamená `200`.
+- Umíš říct, co znamená `302`.
+- Umíš říct, co znamená `404`.
+
+## Co odevzdat v pull requestu
+
+Do pull requestu napiš:
+
+- tři nalezené URL;
+- jejich status codes;
+- jednu větu ke každému status codu.
 

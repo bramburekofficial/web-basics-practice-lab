@@ -1,6 +1,6 @@
-# Images
+# Obrázky
 
-This folder contains local image files used by the practice pages.
+Tato složka obsahuje lokální obrázky používané na stránkách projektu.
 
-Beginner note: image paths are case-sensitive on many servers. If an image does not load, check the exact file name and path in DevTools Network.
+Začátečnická poznámka: na mnoha serverech záleží na přesném názvu souboru včetně velikosti písmen. Pokud se obrázek nenačítá, zkontroluj přesnou cestu v DevTools Network.
 

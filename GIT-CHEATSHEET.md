@@ -1,132 +1,150 @@
-# Git шпаргалка
+# Git cheatsheet
 
-## Склонировать репозиторий
+Krátká taháková stránka pro práci s Gitem v tomto projektu.
+
+## git clone
+
+`git clone` stáhne repozitář z GitHubu do tvého počítače.
 
 ```bash
-git clone <repo-url>
+git clone https://github.com/MARMIXTOP/web-basics-practice-lab.git
 cd web-basics-practice-lab
 ```
 
-Команда `git clone` скачивает проект с GitHub на компьютер.
+## git status
 
-## Проверить состояние
+`git status` ukáže aktuální stav projektu.
 
 ```bash
 git status
 ```
 
-Используйте эту команду часто. Она показывает:
+Používej ho často. Řekne ti:
 
-- какая ветка сейчас открыта;
-- какие файлы изменены;
-- какие файлы уже добавлены в commit;
-- есть ли что отправлять на GitHub.
+- na jaké branch jsi;
+- které soubory jsou změněné;
+- co je připravené na commit;
+- jestli je všechno čisté.
 
-## Создать новую ветку
+## git checkout -b
+
+`Branch` je samostatná větev práce.
+
+Novou branch vytvoříš takto:
 
 ```bash
-git checkout -b practice/day-1-your-name
+git checkout -b practice/day-1-tvoje-jmeno
 ```
 
-Ветка нужна, чтобы не менять `main` напрямую.
+Nepracuj přímo v `main`.
 
-## Добавить файлы в commit
+## git add
+
+`git add` připraví změny do dalšího commitu.
+
+Všechny změny:
 
 ```bash
 git add .
 ```
 
-Эта команда добавляет все изменения в будущий commit.
-
-Если нужно добавить один файл:
+Jeden konkrétní soubor:
 
 ```bash
 git add public/index.html
 ```
 
-## Сделать commit
+## git commit
+
+`Commit` je uložený krok v historii projektu.
 
 ```bash
 git commit -m "Complete day 1 practice"
 ```
 
-Commit должен описывать один понятный шаг.
+Dobrá commit message je krátká a konkrétní.
 
-Плохой message:
+Méně dobré:
 
 ```text
 fix
 ```
 
-Лучше:
+Lepší:
 
 ```text
 Fix broken image path on practice page
 ```
 
-## Отправить ветку на GitHub
+## git push
+
+`git push` pošle tvoji branch na GitHub.
 
 ```bash
-git push origin practice/day-1-your-name
+git push origin practice/day-1-tvoje-jmeno
 ```
 
-После push можно открыть pull request на GitHub.
+Po pushi můžeš na GitHubu otevřít pull request.
 
-## Получить свежие изменения
+## git pull
+
+`git pull` stáhne nové změny z GitHubu do tvého počítače.
 
 ```bash
 git pull
 ```
 
-Используйте `git pull`, чтобы получить обновления из удаленного репозитория.
+Použij ho, když chceš mít lokální projekt aktuální.
 
-## Как не отправить изменения в main
+## Jak se vyhnout pushi do main
 
-Перед работой всегда проверяйте ветку:
+Před prací vždy zkontroluj branch:
 
 ```bash
 git status
 ```
 
-Если вы видите:
+Pokud vidíš, že jsi v `main`, vytvoř si vlastní branch:
+
+```bash
+git checkout -b practice/day-1-tvoje-jmeno
+```
+
+Pravidlo:
 
 ```text
-On branch main
+main je pro hotový a zkontrolovaný kód
+practice/... je pro tvoji práci
 ```
 
-создайте новую ветку:
+## Co dělat, když jsi na špatné branch
 
-```bash
-git checkout -b practice/day-1-your-name
-```
-
-## Что делать, если вы на неправильной ветке
-
-Если изменения еще не закоммичены:
+Pokud změny ještě nejsou v commitu:
 
 ```bash
 git status
-git checkout -b practice/day-1-your-name
+git checkout -b practice/day-1-tvoje-jmeno
 ```
 
-Git перенесет ваши незакоммиченные изменения в новую ветку.
+Git obvykle přenese rozpracované změny do nové branch.
 
-Если изменения уже закоммичены в неправильной ветке, не паникуйте. Сообщите наставнику и покажите:
+Pokud už jsi commit udělal ve špatné branch, nedělej náhodné příkazy. Ukaž mentorovi:
 
 ```bash
 git status
 git log --oneline -5
 ```
 
-## Полезный порядок работы
+## Doporučený postup práce
 
 ```bash
 git status
-git checkout -b practice/day-1-your-name
+git checkout -b practice/day-1-tvoje-jmeno
+npm install
 npm start
 git status
 git add .
 git commit -m "Complete day 1 practice"
-git push origin practice/day-1-your-name
+git push origin practice/day-1-tvoje-jmeno
 ```
 
