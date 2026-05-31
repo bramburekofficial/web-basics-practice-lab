@@ -1,0 +1,23 @@
+{
+  "name": "web-basics-practice-lab",
+  "version": "1.0.0",
+  "description": "A beginner-friendly practice lab for learning how websites move from code to browser to server.",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node server.js"
+  },
+  "keywords": [
+    "frontend",
+    "html",
+    "css",
+    "javascript",
+    "git",
+    "github",
+    "http",
+    "devtools"
+  ],
+  "author": "",
+  "license": "MIT"
+}
+
